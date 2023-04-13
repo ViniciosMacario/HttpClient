@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Net;
 
 internal class Program
 {
@@ -18,9 +17,6 @@ internal class Program
 
         Console.WriteLine($"<------ Nasa Corporação ------>");
         Console.WriteLine($"\n - Título: {dataobj!.title} \n - Data: {dataobj.date} \n - descrição: {dataobj.explanation} \n - Link: {dataobj.url} \n");
-
-        var imageUrl = new WebClient();
-        imageUrl.DownloadFile($"{dataobj.url}", @$"c:\{dataobj.url}");
     }
 }
 
